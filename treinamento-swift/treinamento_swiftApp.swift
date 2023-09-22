@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct treinamento_swiftApp: App {
+    @StateObject var cartData = CartData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(cartData)
         }
     }
 }
